@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "H1": {"temp": 200.0, "mdot": 2.0, "cp": 2.0},
+    "C1": {"temp": 30.0, "mdot": 3.0, "cp": 4.0},
+    "C2": {"temp": 20.0, "mdot": 5.0, "cp": 4.2}
+  },
+  "exchangers": {
+    "E1": {"ua": 40.0, "in_a": "H1", "in_b": "C1",
+           "out_a": "H1_mid", "out_b": "C1_out"},
+    "E2": {"ua": 60.0, "in_a": "H1_mid", "in_b": "C2",
+           "out_a": "H1_out", "out_b": "C2_out"}
+  }
+}
