@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {"name": "hot_oil", "temp": 220.0, "mdot": 2.5, "cp": 2.1},
+    {"name": "feed_water", "temp": 35.0, "mdot": 4.0, "cp": 4.18},
+    {"name": "cooling_air", "temp": 25.0, "mdot": 6.0, "cp": 1.005}
+  ],
+  "exchangers": [
+    {"name": "E1", "ua": 12.0,
+     "in_a": "hot_oil", "in_b": "feed_water",
+     "out_a": "hot_oil_E1", "out_b": "feed_water_E1"},
+    {"name": "E2", "ua": 6.0,
+     "in_a": "hot_oil_E1", "in_b": "cooling_air",
+     "out_a": "hot_oil_E2", "out_b": "cooling_air_E2"}
+  ],
+  "scenarios": [
+    {"name": "E1-retrofit", "exchanger": "E1", "ua": 20.0},
+    {"name": "E2-retrofit", "exchanger": "E2", "ua": 15.0}
+  ]
+}
